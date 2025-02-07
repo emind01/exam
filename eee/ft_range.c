@@ -23,3 +23,15 @@ int *ft_range(int start, int end)
 	}
 	return res;
 }
+
+#include <stdio.h>
+
+int main(void)
+{
+	int *range = ft_range(3, 5);
+	printf("%d,", range[0]);
+	printf("%d,", range[1]);
+	printf("%d,", range[2]);
+	free(range);
+	return 0;
+}

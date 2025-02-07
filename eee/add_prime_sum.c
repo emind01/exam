@@ -29,7 +29,7 @@ int is_prime(int num)
 	if (num%2 == 0) return 0;
 
 	int i = 3;
-	while (i*i <= num)
+	while (i*i <= num) 
 	{
 		if (num%i == 0) return 0;
 		i+=2;

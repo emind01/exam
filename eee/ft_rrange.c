@@ -12,9 +12,9 @@ int	*ft_rrange(int start, int end)
 	range = (int *)malloc(sizeof(int) * (n + 1));
 	if (range)
 	{
-		if (start < end)
+		if (start< end)
 			step = -1;
-		while (i<n)
+		while (i<n+1)
 		{
 			range[i] = end;
 			end = end + step;
@@ -30,9 +30,10 @@ int	*ft_rrange(int start, int end)
 int main(void)
 {
 	int *range = ft_rrange(3, 5);
-	for (size_t i = 0; i < 5-3+1; i++)
-	{
-		printf("%d ", range[i]);
-	}
+	printf("%d,", range[0]);
+	printf("%d,", range[1]);
+	printf("%d,", range[2]);
+	printf("\n");
+	free(range);
 	return 0;
 }
